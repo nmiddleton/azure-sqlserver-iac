@@ -6,7 +6,7 @@
             "value": "globaladmin"
         },
         "administratorLoginPassword": {
-            "value": null
+            "value": "SQL_Admin1!"
         },
         "databaseName": {
             "value": "dbs-s03-uks-neilm-1"
