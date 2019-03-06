@@ -44,7 +44,7 @@ param(
  $templateFilePath = "template.json",
 
  [string]
- $parametersFilePath = "parameters.json"
+ $parametersFilePath = "parameters_IAC.json"
 )
 
 <#

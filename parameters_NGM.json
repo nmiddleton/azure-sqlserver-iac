@@ -1,0 +1,61 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "administratorLogin": {
+            "value": "globaladmin"
+        },
+        "administratorLoginPassword": {
+            "value": "SQL_Admin1!"
+        },
+        "databaseNames": {
+            "value":  [
+                "FRED",
+                "WILMA",
+                "BARNEY"
+            ]
+        },
+        "location": {
+            "value": "uksouth"
+        },
+        "serverName": {
+            "value": "SS-IAC-UKS-NGM"
+        },
+        "createMode": {
+            "value": "Recovery"
+        },
+        "recoverableDatabaseId": {
+            "value": "/subscriptions/51af872a-b560-413b-bb0f-8a11e0f8ce64/resourceGroups/RG-s03-UKS-KCADATA/providers/Microsoft.Sql/servers/ss-s03-uks-kca/recoverabledatabases/dbs-s03-uks-Klaim4-1"
+        },
+        "skuName": {
+            "value": "S1"
+        },
+        "tier": {
+            "value": "Standard"
+        },
+        "zoneRedundant": {
+            "value": false
+        },
+        "licenseType": {
+            "value": ""
+        },
+        "readScaleOut": {
+            "value": "Disabled"
+        },
+        "numberOfReplicas": {
+            "value": 0
+        },
+        "enableATP": {
+            "value": false
+        },
+        "allowAzureIps": {
+            "value": true
+        },
+        "databaseTags": {
+            "value": {}
+        },
+        "serverTags": {
+            "value": {}
+        }
+    }
+}

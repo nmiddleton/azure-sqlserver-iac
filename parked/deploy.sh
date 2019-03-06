@@ -56,7 +56,7 @@ fi
 if [[ -z "$resourceGroupLocation" ]]; then
 	echo "If creating a *new* resource group, you need to set a location "
 	echo "You can lookup locations with the CLI using: az account list-locations "
-	
+
 	echo "Enter resource group location:"
 	read resourceGroupLocation
 fi
@@ -70,7 +70,7 @@ if [ ! -f "$templateFilePath" ]; then
 fi
 
 #parameter file path
-parametersFilePath="parameters.json"
+parametersFilePath="parameters_IAC.json"
 
 if [ ! -f "$parametersFilePath" ]; then
 	echo "$parametersFilePath not found"
