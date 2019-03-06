@@ -102,32 +102,6 @@
             },
             "resources": [
                 {
-                    "type": "databases",
-                    "sku": {
-                        "name": "[parameters('skuName')]",
-                        "tier": "[parameters('tier')]"
-                    },
-                    "name": "[concat('DBS-IAC-UKS-', parameters('databaseNames')[copyIndex()], '-1')]",
-                    "apiVersion": "2017-10-01-preview",
-                    "location": "[parameters('location')]",
-                    "tags": "[parameters('databaseTags')]",
-                    "properties": {
-                        "createMode": "[parameters('createMode')]",
-                        "recoverableDatabaseId": "[parameters('recoverableDatabaseId')]",
-                        "zoneRedundant": "[parameters('zoneRedundant')]",
-                        "licenseType": "[parameters('licenseType')]",
-                        "readScale": "[parameters('readScaleOut')]",
-                        "readReplicaCount": "[parameters('numberOfReplicas')]"
-                    },
-                    "copy": {
-                        "name": "databasecopy",
-                        "count": "[length(parameters('databaseNames'))]"
-                    },
-                    "dependsOn": [
-                        "[concat('Microsoft.Sql/servers/', parameters('serverName'))]"
-                    ]
-                },
-                {
                     "type": "firewallrules",
                     "name": "AllowAllWindowsAzureIps",
                     "apiVersion": "2014-04-01-preview",
@@ -177,6 +151,32 @@
                     ],
                     "condition": "[parameters('enableATP')]"
                 }
+            ]
+        },
+        {
+            "type": "Microsoft.Sql/servers/databases",
+            "sku": {
+                "name": "[parameters('skuName')]",
+                "tier": "[parameters('tier')]"
+            },
+            "name": "[concat([parameters('serverName')],'/','DBS-IAC-UKS-', parameters('databaseNames')[copyIndex()], '-1')]",
+            "apiVersion": "2017-10-01-preview",
+            "location": "[parameters('location')]",
+            "tags": "[parameters('databaseTags')]",
+            "properties": {
+                "createMode": "[parameters('createMode')]",
+                "recoverableDatabaseId": "[parameters('recoverableDatabaseId')]",
+                "zoneRedundant": "[parameters('zoneRedundant')]",
+                "licenseType": "[parameters('licenseType')]",
+                "readScale": "[parameters('readScaleOut')]",
+                "readReplicaCount": "[parameters('numberOfReplicas')]"
+            },
+            "copy": {
+                "name": "databasecopy",
+                "count": "[length(parameters('databaseNames'))]"
+            },
+            "dependsOn": [
+                "[concat('Microsoft.Sql/servers/', parameters('serverName'))]"
             ]
         }
     ]
