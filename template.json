@@ -107,7 +107,7 @@
                         "name": "[parameters('skuName')]",
                         "tier": "[parameters('tier')]"
                     },
-                    "name": "[concat('DBS-S03-UKS-', parameters('databaseNames')[copyIndex()], '-1')]",
+                    "name": "[concat('DBS-IAC-UKS-', parameters('databaseNames')[copyIndex()], '-1')]",
                     "apiVersion": "2017-10-01-preview",
                     "location": "[parameters('location')]",
                     "tags": "[parameters('databaseTags')]",
