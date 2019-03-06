@@ -166,7 +166,7 @@
                 "name": "[parameters('skuName')]",
                 "tier": "[parameters('tier')]"
             },
-            "name": "[concat(variables('dbsPrefix', parameters('databaseNames')[copyIndex()], '-1')]",
+            "name": "[concat(variables('dbsPrefix'), parameters('databaseNames')[copyIndex()], '-1')]",
             "apiVersion": "2017-10-01-preview",
             "location": "[parameters('location')]",
             "tags": "[parameters('databaseTags')]",
