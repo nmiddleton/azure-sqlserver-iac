@@ -82,8 +82,8 @@
         "uniqueStorage": "[uniqueString(variables('subscriptionId'), variables('resourceGroupName'), parameters('location'))]",
         "storageName": "[tolower(concat('sqlva', variables('uniqueStorage')))]",
         "dbsPrefix": "[toupper(concat(parameters('serverName'), '/', 'DBS-', parameters('environmentShortName'), '-', parameters('locationShortName'), '-'))]",
-        "SQLServerUpper": "toupper(parameters('serverName'))",
-        "SQLServerLower": "tolower(parameters('serverName'))"
+        "SQLServerUpper": "[toupper(parameters('serverName'))]",
+        "SQLServerLower": "[tolower(parameters('serverName'))]"
     },
     "resources": [
         {
