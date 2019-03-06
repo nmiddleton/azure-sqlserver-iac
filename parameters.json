@@ -8,8 +8,16 @@
         "administratorLoginPassword": {
             "value": "SQL_Admin1!"
         },
-        "databaseName": {
-            "value": "dbs-s03-uks-neilm-1"
+        "databaseNames": {
+            "value":  [
+              "DIABLO",
+              "KLAIM4",
+              "EVENT",
+              "KCG",
+              "IDP",
+              "EMS",
+              "META"
+            ]
         },
         "location": {
             "value": "uksouth"

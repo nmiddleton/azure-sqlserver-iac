@@ -8,9 +8,6 @@
         "administratorLoginPassword": {
             "type": "SecureString"
         },
-        "databaseName": {
-            "type": "String"
-        },
         "location": {
             "type": "String"
         },
@@ -60,6 +57,17 @@
         "serverTags": {
             "defaultValue": {},
             "type": "Object"
+        },
+        "databaseNames": {
+            "type": "array",
+            "defaultValue": [
+                "DIABLO",
+                "KLAIM4",
+                "EVENT",
+                "KCG",
+                "IDP",
+                "EMS"
+            ]
         }
     },
     "variables": {
@@ -99,7 +107,7 @@
                         "name": "[parameters('skuName')]",
                         "tier": "[parameters('tier')]"
                     },
-                    "name": "[parameters('databaseName')]",
+                    "name": "[concat('DBS-S03-UKS-', parameters('databaseNames')[copyIndex()], '-1')]",
                     "apiVersion": "2017-10-01-preview",
                     "location": "[parameters('location')]",
                     "tags": "[parameters('databaseTags')]",
@@ -110,6 +118,10 @@
                         "licenseType": "[parameters('licenseType')]",
                         "readScale": "[parameters('readScaleOut')]",
                         "readReplicaCount": "[parameters('numberOfReplicas')]"
+                    },
+                    "copy": {
+                        "name": "databasecopy",
+                        "count": "[length(parameters('databaseNames'))]"
                     },
                     "dependsOn": [
                         "[concat('Microsoft.Sql/servers/', parameters('serverName'))]"
@@ -141,7 +153,7 @@
                     },
                     "dependsOn": [
                         "[concat('Microsoft.Sql/servers/', parameters('serverName'))]",
-                        "[concat('Microsoft.Sql/servers/', parameters('serverName'), '/databases/', parameters('databaseName'))]"
+                        "databasecopy"
                     ],
                     "condition": "[parameters('enableATP')]"
                 },
