@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88e04e31-7661-4b0c-80dc-c0efe1d919e8" name="Default Changelist" comment="add multiple databases">
-      <change afterPath="$PROJECT_DIR$/parameters_NGM.json" afterDir="false" />
+    <list default="true" id="88e04e31-7661-4b0c-80dc-c0efe1d919e8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DeploymentHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/parked/DeploymentHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/parked/deploy.ps1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/parked/deploy.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deployer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/parked/deployer.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parameters.json" beforeDir="false" afterPath="$PROJECT_DIR$/parameters_IAC.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parameters_IAC.json" beforeDir="false" afterPath="$PROJECT_DIR$/parameters_IAC.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parameters_NGM.json" beforeDir="false" afterPath="$PROJECT_DIR$/parameters_NGM.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,16 +21,16 @@
         <entry file="file://$PROJECT_DIR$/parked/deploy.ps1">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-432">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/parameters_IAC.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+            <state relative-caret-position="535">
+              <caret line="66" column="67" selection-start-line="66" selection-start-column="67" selection-end-line="66" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -51,23 +47,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+            <state relative-caret-position="736">
+              <caret line="58" column="25" lean-forward="true" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
               <folding>
                 <element signature="e#2220#2619#0" />
-                <element signature="e#4018#4625#0" />
-                <element signature="e#4643#5393#0" />
-                <element signature="e#5411#6633#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parameters_NGM.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+            <state relative-caret-position="632">
+              <caret line="62" column="67" selection-start-line="62" selection-start-column="67" selection-end-line="62" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -80,7 +73,16 @@
       <find>databaseName</find>
       <find>export</find>
       <find>deploy</find>
+      <find>storageName</find>
+      <find>parameters('serverName')</find>
+      <find>SQLServerLower</find>
     </findStrings>
+    <replaceStrings>
+      <replace>variables('SQLServerUpper')</replace>
+      <replace>variables('SQLServerLower')</replace>
+      <replace>variables('SQLServerUperp')</replace>
+      <replace>SQLServerName</replace>
+    </replaceStrings>
     <dirStrings>
       <dir>H:\GitHub\azure-sqlserver-iac</dir>
     </dirStrings>
@@ -94,9 +96,10 @@
       <list>
         <option value="$PROJECT_DIR$/sdf" />
         <option value="$PROJECT_DIR$/parameters.json" />
-        <option value="$PROJECT_DIR$/template.json" />
         <option value="$PROJECT_DIR$/deploy.ps1" />
+        <option value="$PROJECT_DIR$/template.json" />
         <option value="$PROJECT_DIR$/parameters_NGM.json" />
+        <option value="$PROJECT_DIR$/parameters_IAC.json" />
       </list>
     </option>
   </component>
@@ -175,7 +178,7 @@
       <workItem from="1551345991503" duration="203000" />
       <workItem from="1551346235193" duration="6403000" />
       <workItem from="1551456337587" duration="597000" />
-      <workItem from="1551800271264" duration="7724000" />
+      <workItem from="1551800271264" duration="17411000" />
     </task>
     <task id="LOCAL-00001" summary="password null causes error">
       <created>1551368125274</created>
@@ -219,17 +222,66 @@
       <option name="project" value="LOCAL" />
       <updated>1551876254406</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="park the manual deploy scripts, mutiple parameters files">
+      <created>1551877952950</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1551877952950</updated>
+    </task>
+    <task id="LOCAL-00008" summary="shortnames for location and environment for db prefix">
+      <created>1551878830781</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1551878830781</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fix syntax">
+      <created>1551879381139</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1551879381139</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fix syntax">
+      <created>1551880663607</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1551880663607</updated>
+    </task>
+    <task id="LOCAL-00011" summary="support lowercase SQL server for firewall rules">
+      <created>1551884893756</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1551884893756</updated>
+    </task>
+    <task id="LOCAL-00012" summary="support lowercase SQL server for firewall rules">
+      <created>1551885131732</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1551885131732</updated>
+    </task>
+    <task id="LOCAL-00013" summary="enforce lowercase SQL server for firewall rules">
+      <created>1551888150399</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1551888150399</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18220000" />
+    <option name="totallyTimeSpent" value="27907000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15031983" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17237164" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Messages" sideWeight="0.49946696" />
@@ -270,7 +322,12 @@
     <MESSAGE value="switch iac name" />
     <MESSAGE value="make Database a top level resource linked to SQL server" />
     <MESSAGE value="fix concat" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix concat" />
+    <MESSAGE value="park the manual deploy scripts, mutiple parameters files" />
+    <MESSAGE value="shortnames for location and environment for db prefix" />
+    <MESSAGE value="fix syntax" />
+    <MESSAGE value="support lowercase SQL server for firewall rules" />
+    <MESSAGE value="enforce lowercase SQL server for firewall rules" />
+    <option name="LAST_COMMIT_MESSAGE" value="enforce lowercase SQL server for firewall rules" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/parked/deployer.rb">
@@ -288,13 +345,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sdf" />
-    <entry file="file://$PROJECT_DIR$/parameters_IAC.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/parked/deploy.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -305,27 +355,31 @@
     <entry file="file://$PROJECT_DIR$/parked/deploy.ps1">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-432">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/template.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        <state relative-caret-position="736">
+          <caret line="58" column="25" lean-forward="true" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
           <folding>
             <element signature="e#2220#2619#0" />
-            <element signature="e#4018#4625#0" />
-            <element signature="e#4643#5393#0" />
-            <element signature="e#5411#6633#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/parameters_NGM.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+        <state relative-caret-position="632">
+          <caret line="62" column="67" selection-start-line="62" selection-start-column="67" selection-end-line="62" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parameters_IAC.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="66" column="67" selection-start-line="66" selection-start-column="67" selection-end-line="66" selection-end-column="67" />
         </state>
       </provider>
     </entry>

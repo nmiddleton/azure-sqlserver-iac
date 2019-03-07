@@ -62,7 +62,12 @@
       "value": true
     },
     "databaseTags": {
-      "value": {}
+      "value": {
+        "project": "IAC Prototyping",
+        "description": "Deploying Infrastructure as Code, these resources can be deleted at will",
+        "department": "IT Development and IT Operations",
+        "support": "IT Development (contact Neil Middleton)"
+      }
     },
     "serverTags": {
       "value": {}
